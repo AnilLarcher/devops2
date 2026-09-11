@@ -1,4 +1,4 @@
-package com.napier.devops1;
+package com.napier.devops2;
 
 public class App
 {
