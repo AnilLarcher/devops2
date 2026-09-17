@@ -10,7 +10,12 @@
 
 #C:\Users\Anil A. Larcher\Desktop\seMethods2\src\main\java\com\napier\sem\App.java
 
-FROM amazoncorretto:17
-COPY ./target/classes/com /tmp/com
+#FROM amazoncorretto:17
+#COPY ./target/classes/com /tmp/com
+#WORKDIR /tmp
+#ENTRYPOINT ["java", "com.napier.devops2.App"]
+
+FROM FROM amazoncorretto:17
+COPY ./target/devops-0.1.0.1-jar-with-dependencies.jar /tmp
 WORKDIR /tmp
-ENTRYPOINT ["java", "com.napier.devops2.App"]
+ENTRYPOINT ["java", "-jar", "devops-0.1.0.1-jar-with-dependencies.jar"]
